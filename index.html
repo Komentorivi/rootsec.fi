@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rootsec</title>
+<meta name="description" content="Rootsec builds network security tools that run on your own hardware. Maker of Northwatch.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d2633'/%3E%3Cpath d='M9 26V6h8a6 6 0 0 1 0 12H9m8 0 7 8' fill='none' stroke='%23e8f0f2' stroke-width='3.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Big+Shoulders+Display:wght@600;800&display=swap" rel="stylesheet">
+<style>
+/* Rootsec: the quiet parent. Same frost + ink as Northwatch, no product colours except
+   inside the Northwatch panel. The memorable thing is the root drawing under the wordmark. */
+:root{
+  --frost:#e8f0f2; --paper:#f4f8f9; --ink:#0d2633; --steel:#506b78; --rime:#c3d3d9; --deep:#0a6f89;
+  --abyss:#02060b; --edge:#16384a; --ion:#45e3ff; --snow:#d6ecf5; --mute:#7f9cab;
+  --display:'Big Shoulders Display',Impact,sans-serif;
+  --body:'Atkinson Hyperlegible',system-ui,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--frost);color:var(--ink);font:400 18px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--deep);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gut)}
+
+.hero{padding:clamp(40px,9vw,110px) 0 0}
+.word{font:800 clamp(84px,19vw,232px)/.8 var(--display);letter-spacing:-.015em;margin:0}
+.roots{display:block;width:100%;height:auto;margin:-2px 0 0;color:var(--steel)}
+.roots path{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.roots .main{stroke:var(--ink);stroke-width:2.4}
+.roots .tip{fill:var(--deep);stroke:none}
+.lede{font-size:clamp(20px,2.4vw,26px);line-height:1.45;max-width:30em;margin:18px 0 0}
+
+section{padding:clamp(56px,9vw,100px) 0 0}
+h2{font:800 clamp(36px,5vw,58px)/.95 var(--display);margin:0 0 22px}
+
+.product{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--abyss);color:var(--snow);
+  border-radius:6px;overflow:hidden;text-decoration:none}
+@media (max-width:760px){.product{grid-template-columns:1fr}}
+.product .txt{padding:clamp(24px,4vw,40px)}
+.product h3{font:600 26px/1 var(--display);letter-spacing:.34em;margin:0 0 16px;color:var(--snow)}
+.product p{margin:0 0 20px;color:var(--snow)}
+.product .go{color:var(--ion);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.product:hover .go{color:var(--snow)}
+.product:focus-visible{outline:3px solid var(--deep);outline-offset:4px}
+.product svg{display:block;width:100%;height:100%;min-height:200px;background:#050d14}
+
+.beliefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,4vw,48px)}
+@media (max-width:760px){.beliefs{grid-template-columns:1fr}}
+.beliefs h3{font:800 30px/1 var(--display);margin:0 0 10px;padding-top:14px;border-top:2px solid var(--ink)}
+.beliefs p{margin:0}
+
+.contact p{max-width:32em;margin:0 0 14px}
+.mail{font:800 clamp(32px,6vw,64px)/1 var(--display);color:var(--ink);text-decoration:none;border-bottom:3px solid var(--deep)}
+.mail:hover{color:var(--deep)}
+footer{margin-top:clamp(56px,9vw,100px);border-top:1px solid var(--rime);padding:22px 0 40px;font-size:15px;color:var(--steel)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1 class="word">Rootsec</h1>
+    <svg class="roots" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="main" d="M0 4 H1000"/>
+      <path d="M90 4 C 95 40, 60 60, 70 112"/>
+      <path d="M90 4 C 110 34, 150 40, 170 86"/>
+      <path d="M300 4 C 290 30, 250 46, 240 70"/>
+      <path d="M300 4 C 320 50, 330 70, 312 116"/>
+      <path d="M520 4 C 530 30, 580 40, 600 96"/>
+      <path d="M520 4 C 505 28, 470 34, 455 60"/>
+      <path d="M760 4 C 770 40, 740 66, 752 104"/>
+      <path d="M760 4 C 790 26, 840 30, 870 74"/>
+      <path d="M940 4 C 930 30, 960 52, 950 88"/>
+      <circle class="tip" cx="312" cy="116" r="4"/>
+    </svg>
+    <p class="lede">We build network security tools that run on your own hardware and tell you, in plain words, what is happening on your network.</p>
+  </header>
+
+  <section aria-labelledby="p-h">
+    <h2 id="p-h">Our product</h2>
+    <a class="product" href="https://northwatch.fi">
+      <div class="txt">
+        <h3>NORTHWATCH</h3>
+        <p>A live map of your firewall's traffic and attacks. When a device on your network misbehaves, Northwatch opens a case, explains it and lets you cut the device off with one click.</p>
+        <span class="go">Visit northwatch.fi</span>
+      </div>
+      <svg viewBox="0 0 400 240" role="img" aria-label="Sketch of connections arriving at a home network">
+        <g fill="none" stroke-width="1.3" stroke-linecap="round">
+          <path d="M30 190 Q 150 40 290 90" stroke="#45e3ff" opacity=".7"/>
+          <path d="M380 200 Q 360 80 296 88" stroke="#ff2e55" opacity=".8"/>
+          <path d="M60 60 Q 180 20 288 84" stroke="#ff9f43" opacity=".8"/>
+          <path d="M210 230 Q 250 140 292 94" stroke="#6bffb0" opacity=".7"/>
+          <path d="M370 30 Q 330 40 298 84" stroke="#ffd23f" opacity=".8"/>
+          <circle cx="294" cy="90" r="16" stroke="#45e3ff" opacity=".45"/>
+        </g>
+        <circle cx="294" cy="90" r="4" fill="#d6ecf5"/>
+      </svg>
+    </a>
+  </section>
+
+  <section aria-labelledby="b-h">
+    <h2 id="b-h">How we build</h2>
+    <div class="beliefs">
+      <div><h3>Your data stays home</h3><p>Our software runs on your own machine. Raw logs never leave it, and nothing is sent to us.</p></div>
+      <div><h3>Plain words</h3><p>An alarm says what happened, on which device, and what to do next. No dashboards full of codes.</p></div>
+      <div><h3>Works with your gear</h3><p>We read the firewall and Wi-Fi you already own instead of asking you to replace them.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="c-h">
+    <h2 id="c-h">Contact</h2>
+    <p>Questions, demos and partnerships:</p>
+    <a class="mail" href="mailto:hello@rootsec.fi">hello@rootsec.fi</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Rootsec, Helsinki, Finland</span>
+    <!-- Lisää Y-tunnus tähän, kun yritys on rekisteröity -->
+  </div>
+</footer>
+</body>
+</html>
