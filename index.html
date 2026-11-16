@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="fi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rootsec</title>
-<meta name="description" content="Rootsec builds affordable network security for homes and small businesses. Maker of Northwatch.">
+<meta name="description" content="Rootsec tekee edullista verkon tietoturvaa kodeille ja pienyrityksille. Northwatchin tekijä.">
+<link rel="alternate" hreflang="fi" href="https://rootsec.fi/">
+<link rel="alternate" hreflang="en" href="https://rootsec.fi/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a1118'/%3E%3Cpath d='M26 40H64M20 60H58M44 20 34 80M58 20 48 80' stroke='%23eef2f3' stroke-width='11' fill='none'/%3E%3Crect x='66' y='70' width='18' height='10' fill='%23f2a83b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +33,7 @@ p{margin:0 0 14px}
 .bar nav a{text-decoration:none}
 .bar nav a:hover{color:var(--paper)}
 @media (max-width:560px){.bar nav a:not(:last-child){display:none}}
+.bar .lang{font:500 14px var(--mono);color:#7f909b}.bar .lang:hover{color:var(--paper)}
 .hero .body{padding:clamp(56px,10vw,128px) 0 clamp(56px,9vw,112px)}
 .prompt{font:500 clamp(14px,1.6vw,16px) var(--mono);color:#7f909b;margin-bottom:22px}
 .prompt b{color:var(--cursor);font-weight:500}
@@ -70,52 +73,52 @@ footer .lk{font-size:16px;color:var(--root)}
 <header class="hero">
   <div class="wrap">
     <div class="bar">
-      <a class="lk" href="#" aria-label="Rootsec home"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M27 40H65M21 60H59M45 22 35 78M59 22 49 78" fill="none" stroke="#f3f5f4" stroke-width="9" stroke-linecap="square"/><rect x="68" y="70" width="22" height="9" fill="#f2a83b"><animate attributeName="opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect></svg><span class="wm">rootsec</span></a>
-      <nav><a href="#product">Northwatch</a><a href="#how">How we build</a><a href="#contact">Contact</a></nav>
+      <a class="lk" href="#" aria-label="Rootsec etusivu"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M27 40H65M21 60H59M45 22 35 78M59 22 49 78" fill="none" stroke="#f3f5f4" stroke-width="9" stroke-linecap="square"/><rect x="68" y="70" width="22" height="9" fill="#f2a83b"><animate attributeName="opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect></svg><span class="wm">rootsec</span></a>
+      <nav><a href="#product">Northwatch</a><a href="#how">Periaatteet</a><a href="#contact">Yhteystiedot</a><a class="lang" href="en/" hreflang="en" lang="en">EN</a></nav>
     </div>
     <div class="body">
       <p class="prompt"># whoami <b>rootsec</b></p>
       <h1>Root access to your own network<span class="cur" aria-hidden="true"></span></h1>
-      <p class="lede">Rootsec builds affordable network security for homes and small businesses. Professional-grade watching, plain-language answers and a monthly price that makes sense without an IT department.</p>
+      <p class="lede">Rootsec tekee edullista verkon tietoturvaa kodeille ja pienyrityksille. Ammattitason valvonta, selkeät vastaukset suomeksi ja kuukausihinta, joka on järkevä ilman omaa IT-osastoa.</p>
     </div>
   </div>
 </header>
 
 <main class="wrap">
   <section id="product">
-    <p class="label">Our product</p>
-    <h2>A security operations centre for the rest of us.</h2>
+    <p class="label">Tuotteemme</p>
+    <h2>Tietoturvavalvomo meille muillekin.</h2>
     <a class="product" href="https://northwatch.fi">
       <div class="txt">
         <div class="nw">NORTHWATCH</div>
-        <p>Watches your network around the clock, raises the alarm only when something real happens and explains it in plain language. It gives you the facts, you make the call.</p>
-        <span class="go">Visit northwatch.fi</span>
+        <p>Valvoo verkkoasi ympäri vuorokauden, hälyttää vain kun jotain oikeasti tapahtuu ja kertoo sen selkeällä suomella. Northwatch kertoo tosiasiat, sinä päätät.</p>
+        <span class="go">Siirry northwatch.fi-sivulle</span>
       </div>
-      <img src="img/northwatch.webp" width="1400" height="840" alt="The Northwatch situation room with a live world map of network traffic and blocked attacks" loading="lazy">
+      <img src="img/northwatch.webp" width="1400" height="840" alt="Northwatchin maailmankartta, jossa näkyy verkkoliikenne ja pysäytetyt hyökkäykset" loading="lazy">
     </a>
   </section>
 
   <section id="how">
-    <p class="label">How we build</p>
-    <h2>Security you can understand and afford.</h2>
+    <p class="label">Periaatteet</p>
+    <h2>Tietoturvaa, jota ymmärtää ja johon on varaa.</h2>
     <div class="beliefs">
-      <div><h3>Real alarms only</h3><p>Thousands of blocked scans a day are normal. We tell you about the things that need you, and stay quiet about the rest.</p></div>
-      <div><h3>Plain words</h3><p>Every alarm says what happened, on which device, how sure we are and what to do next. You decide.</p></div>
-      <div><h3>Your network, your data</h3><p>Our software runs on a small box in your own network and works with the firewall you already have.</p></div>
+      <div><h3>Vain oikeat hälytykset</h3><p>Tuhannet estetyt koputukset päivässä ovat tavallisia. Kerromme asioista, jotka vaativat sinua, ja olemme hiljaa lopuista.</p></div>
+      <div><h3>Selkeällä suomella</h3><p>Jokainen hälytys kertoo, mitä tapahtui, missä laitteessa, kuinka varmoja olemme ja mitä tehdä seuraavaksi. Sinä päätät.</p></div>
+      <div><h3>Sinun verkkosi, sinun tietosi</h3><p>Ohjelmamme toimii omalla pienellä tietokoneellasi omassa verkossasi ja yhdessä palomuurin kanssa, joka sinulla jo on.</p></div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <p class="label">Contact</p>
-    <h2>Talk to us.</h2>
-    <p>Questions, demos and partnerships.</p>
+    <p class="label">Yhteystiedot</p>
+    <h2>Ota yhteyttä.</h2>
+    <p>Kysymykset, esittelyt ja yhteistyö.</p>
     <a class="mail" href="mailto:hello@rootsec.fi">hello@rootsec.fi</a>
   </section>
 </main>
 <footer>
   <div class="wrap">
     <span class="lk"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M27 40H65M21 60H59M45 22 35 78M59 22 49 78" fill="none" stroke="#0a1118" stroke-width="9" stroke-linecap="square"/><rect x="68" y="70" width="22" height="9" fill="#f2a83b"/></svg><span class="wm">rootsec</span></span>
-    <span>Helsinki, Finland</span>
+    <span>Helsinki</span>
     <!-- Lisää Y-tunnus tähän, kun yritys on rekisteröity -->
   </div>
 </footer>
